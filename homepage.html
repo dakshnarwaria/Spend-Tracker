@@ -1,0 +1,155 @@
+<html><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Manrope%3Awght%40400%3B500%3B700%3B800&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<title>Rule-keeper</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+      :root {
+        --primary-color: #10B981;--secondary-color: #1F2937;--text-primary: #10B981;--text-secondary: #9CA3AF;}
+    </style>
+</head>
+<body class="bg-[var(--secondary-color)]" style='font-family: Manrope, "Noto Sans", sans-serif;'>
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden group/design-root">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-700 px-10 py-4 bg-[#111827]">
+<div class="flex items-center gap-3 text-slate-200">
+<div class="size-8 text-[var(--primary-color)]">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" fill="currentColor"></path></svg>
+</div>
+<h2 class="text-xl font-bold tracking-tight text-[var(--text-primary)]">Rule-Keeper</h2>
+</div>
+<div class="flex items-center gap-6">
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-sm font-medium text-[var(--text-primary)] hover:text-green-400 transition-colors" href="#">Overview</a>
+<a class="text-sm font-medium text-[var(--text-primary)] hover:text-green-400 transition-colors" href="#">Expenses</a>
+<a class="text-sm font-medium text-[var(--text-primary)] hover:text-green-400 transition-colors" href="#">Budgets</a>
+<a class="text-sm font-medium text-[var(--text-primary)] hover:text-green-400 transition-colors" href="#">Reports</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-slate-700 text-slate-300 hover:bg-slate-600 transition-colors">
+<span class="material-symbols-outlined text-xl text-[var(--text-primary)]"> notifications </span>
+</button>
+<button class="flex items-center gap-2 text-sm font-medium text-[var(--text-primary)] hover:text-green-400 transition-colors">
+<span class="material-symbols-outlined"> logout </span>
+<span class="hidden md:inline">Logout</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-1 px-4 sm:px-6 lg:px-8 py-12">
+<div class="mx-auto max-w-5xl">
+<div class="mb-12 text-center">
+<h1 class="text-4xl font-extrabold tracking-tight text-[var(--text-primary)]">-: Rule Keeper :-</h1>
+<p class="mt-2 text-lg text-[var(--text-secondary)]">Here's a summary of your financial activity and insights.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="bg-[#111827] rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300">
+<div class="p-6">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-2xl text-[var(--text-primary)]">pie_chart</span>
+<h3 class="text-xl font-bold text-[var(--text-primary)]">Spend Analysis</h3>
+
+
+</div>
+<p class="text-sm text-[var(--text-secondary)] mb-4">View a detailed analysis of your spending across different categories.</p>
+<a class="inline-flex items-center gap-2 text-sm font-semibold text-[var(--primary-color)] hover:text-green-400" href="#">
+                    View Details
+                    <span class="material-symbols-outlined">arrow_forward</span>
+                    <button onclick="window.location.href='http://127.0.0.1:5500/categories%20of%20expense.html';">
+  Click Here </button>
+
+</a>
+</div>
+</div>
+<div class="bg-[#111827] rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300">
+<div class="p-6">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-2xl text-[var(--text-primary)]">emoji_events</span>
+<h3 class="text-xl font-bold text-[var(--text-primary)]">Challenges</h3>
+</div>
+<p class="text-sm text-[var(--text-secondary)] mb-4">Track your progress towards your monthly savings goal and earn rewards.</p>
+<a class="inline-flex items-center gap-2 text-sm font-semibold text-[var(--primary-color)] hover:text-green-400" href="#">
+                    View Challenge
+                    <span class="material-symbols-outlined">arrow_forward</span>
+                    <button onclick="window.location.href='http://127.0.0.1:5500/challenges.html';">
+  Click Here
+</button>
+</div>
+</div>
+<div class="bg-[#111827] rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300">
+<div class="p-6">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-2xl text-[var(--text-primary)]">history</span>
+<h3 class="text-xl font-bold text-[var(--text-primary)]">Expense History</h3>
+</div>
+<p class="text-sm text-[var(--text-secondary)] mb-4">Review your recent expenses and identify areas for potential savings.</p>
+<a class="inline-flex items-center gap-2 text-sm font-semibold text-[var(--primary-color)] hover:text-green-400" href="#">
+                    View History
+                    <span class="material-symbols-outlined">arrow_forward</span>
+                    <button onclick="window.location.href='http://127.0.0.1:5500/history.html';">
+  Click Here
+</button>
+</div>
+</div>
+<div class="bg-[#111827] rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300">
+<div class="p-6">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-2xl text-[var(--text-primary)]">lightbulb</span>
+<h3 class="text-xl font-bold text-[var(--text-primary)]">General Tips</h3>
+</div>
+<p class="text-sm text-[var(--text-secondary)] mb-4">Get personalized tips and advice to improve your financial health.</p>
+<a class="inline-flex items-center gap-2 text-sm font-semibold text-[var(--primary-color)] hover:text-green-400" href="#">
+                    View Tips
+                    <span class="material-symbols-outlined">arrow_forward</span>
+                    <button onclick="window.location.href='http://127.0.0.1:5500/general%20tips.html';">
+  Click Here</button>
+</a>
+</div>
+</div>
+<div class="bg-[#111827] rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300">
+<div class="p-6">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-2xl text-[var(--text-primary)]">leaderboard</span>
+<h3 class="text-xl font-bold text-[var(--text-primary)]">Leaderboard</h3>
+</div>
+<p class="text-sm text-[var(--text-secondary)] mb-4">See how you rank against other users and climb the leaderboard.</p>
+<a class="inline-flex items-center gap-2 text-sm font-semibold text-[var(--primary-color)] hover:text-green-400" href="#">
+                    View Rankings
+                    <span class="material-symbols-outlined">arrow_forward</span>
+                    <button onclick="window.location.href='http://127.0.0.1:5500/leaderboard.html';">
+  Click Here</button>
+
+</a>
+</div>
+</div>
+<div class="bg-[#111827] rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300">
+<div class="p-6">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-2xl text-[var(--text-primary)]">track_changes</span>
+<h3 class="text-xl font-bold text-[var(--text-primary)]">Upcoming Targets</h3>
+</div>
+<p class="text-sm text-[var(--text-secondary)] mb-4">Set and track your financial goals to stay on top of your finances.</p>
+<a class="inline-flex items-center gap-2 text-sm font-semibold text-[var(--primary-color)] hover:text-green-400" href="#">
+                    Set Targets
+                    <span class="material-symbols-outlined">arrow_forward</span>                
+                    <button onclick="window.location.href='http://127.0.0.1:5500/upcoming%20targets.html';">
+  Click Here
+</button>
+
+
+
+
+
+</a>
+
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>

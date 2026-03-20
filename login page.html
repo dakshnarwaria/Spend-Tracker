@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Manrope%3Awght%40400%3B500%3B700%3B800&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<title>Rule-Keeper Login</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+      body {
+        font-family: 'Manrope', 'Noto Sans', sans-serif;
+      }
+      .bg-piggy-bank {
+        background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC6SIOlHfZDVTlILW0FI369ojQOTeo_lJ3E-XBHiDFrsBu24i1cP7B1ZfWnBfjs1mhB8ovRYKz6Qj5m7E4eEBacaD8O3FWz0eHsPHMv94y80lXjczO2FvNqzOUqORRq12iudIEUBeGVAyP5XPL1UmnqCS0dVR2_HUg-uOPNHzGV47mZI1qT48lC9fqcGGPlE_lN-MN7t1godT1_lQvHr6haFnAGaXObp7NxZYe9kJZgqi2t973B8OxACU-BqtpcuRxM2JVI1vQtJw');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    </style>
+</head>
+<body class="bg-piggy-bank bg-fixed">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-[#112211]/80 backdrop-blur-sm dark group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#234823]/50 px-10 py-4">
+<a class="flex items-center gap-4 text-white" href="#">
+<svg class="h-6 w-6 text-[#11d411]" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" fill="currentColor"></path></svg>
+<h2 class="text-white text-xl font-bold leading-tight tracking-[-0.015em]">Rule-Keeper</h2>
+</a>
+<div class="flex flex-1 justify-end gap-6">
+<nav class="flex items-center gap-6">
+<a class="text-gray-300 hover:text-white text-base font-medium leading-normal transition-colors" href="#">Features</a>
+<a class="text-gray-300 hover:text-white text-base font-medium leading-normal transition-colors" href="#">Pricing</a>
+<a class="text-gray-300 hover:text-white text-base font-medium leading-normal transition-colors" href="#">Support</a>
+</nav>
+<a class="flex min-w-[96px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-10 px-5 bg-transparent border border-[#11d411] text-[#11d411] hover:bg-[#11d411] hover:text-[#112211] text-sm font-bold leading-normal tracking-[0.015em] transition-colors" href="#">
+<span class="truncate">Sign up</span>
+</a>
+</div>
+</header>
+<main class="flex flex-1 items-center justify-center py-12">
+<div class="flex w-full max-w-md flex-col items-center justify-center rounded-xl bg-[#112211]/60 p-8 shadow-2xl backdrop-blur-md">
+<div class="mb-8 text-center">
+<h1 class="text-3xl font-bold tracking-tight text-white">Welcome Back</h1>
+<p class="mt-2 text-gray-400">Please enter your credentials to log in.</p>
+</div>
+<form class="w-full space-y-6">
+<div class="flex flex-col">
+<label class="pb-2 text-base font-medium text-gray-300" for="username">Username or email</label>
+<input class="form-input w-full resize-none rounded-md border-2 border-[#234823] bg-[#1a381a] p-4 text-base text-white placeholder:text-gray-500 transition-colors focus:border-[#11d411] focus:outline-none focus:ring-0" id="username" name="username" placeholder="e.g., jane.doe@example.com" type="text"/>
+</div>
+<div class="flex flex-col">
+<label class="pb-2 text-base font-medium text-gray-300" for="password">Password</label>
+<input class="form-input w-full resize-none rounded-md border-2 border-[#234823] bg-[#1a381a] p-4 text-base text-white placeholder:text-gray-500 transition-colors focus:border-[#11d411] focus:outline-none focus:ring-0" id="password" name="password" placeholder="Enter your password" type="password"/>
+</div>
+<button class="flex w-full cursor-pointer items-center justify-center rounded-md h-12 px-6 bg-[#11d411] text-[#112211] text-base font-bold tracking-wider transition-transform hover:scale-105" type="submit">
+<span class="truncate">For Login</span>
+<a href="http://127.0.0.1:5500/homepage.html#"> ‎ Click Here</a>            
+
+
+</button>
+</form>
+<div class="mt-6 text-center">
+<a class="text-sm text-gray-400 underline hover:text-white" href="#">Forgot password?</a>
+<p class="mt-2 text-sm text-gray-400">
+                Don't have an account?
+                <a class="font-semibold text-[#11d411] hover:underline" href="#">Sign up</a>
+</p>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>

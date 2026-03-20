@@ -1,0 +1,160 @@
+<html><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Manrope%3Awght%40400%3B500%3B700%3B800&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<title>Expenses Calculator </title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-[#0F172A] dark group/design-root overflow-x-hidden" style='font-family: Manrope, "Noto Sans", sans-serif;'>
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#1E293B] px-10 py-3">
+<div class="flex items-center gap-4 text-[#11d411]">
+<span class="material-symbols-outlined text-4xl">
+              track_changes
+            </span>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">Rule-Keeper</h2>
+</div>
+<div class="flex flex-1 justify-end gap-4">
+<nav class="flex items-center gap-6">
+<a class="text-white/80 hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Dashboard</a>
+<a class="text-white/80 hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Transactions</a>
+<a class="text-white/80 hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Budgets</a>
+<a class="text-white/80 hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Reports</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 w-10 bg-[#1E293B] text-white/80 hover:text-white transition-colors">
+<span class="material-symbols-outlined">
+                  notifications
+                </span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-[#1E293B]" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBoPFkZNnsqP0TaQBmKZYt0yHcj4tZd7La0SbYTB6AJQ3UDnyJhovV5IfnuM2yGpsWRMaeP-tAlghz_At3W1uvJ_AyPv-Z1gw9_FWGDAxNSWS-hn5n89auNKoT8Cd2hRnvryPl7elddDVvYj0Ng9-igwqgw0g1qebUqReb3OQQ8gazaDqqPG6Wt3Bj5NS-MBILAJxINrxc9PY4K4KMKNYSH_VWh7g2nuXvipuQIhYPBbAwzl5K63NKAhWkv36ppMZp1gUNyLP0PwA");'></div>
+</div>
+</div>
+</header>
+<main class="flex-1 px-10 py-8">
+<div class="mx-auto max-w-7xl">
+<div class="mb-8">
+<h1 class="text-4xl font-bold tracking-tight text-white">Spend Analysis</h1>
+<p class="mt-2 text-lg text-white/60">Visualize your spending patterns across different categories.</p>
+</div>
+<div class="grid grid-cols-1 gap-8 lg:grid-cols-5">
+<div class="lg:col-span-3 rounded-lg bg-[#1E293B] p-6 shadow-lg">
+<h2 class="text-xl font-semibold text-white mb-4">Spending Radar</h2>
+<div class="relative h-[400px] w-full">
+<canvas id="radarChart"></canvas>
+</div>
+</div>
+<div class="lg:col-span-2 space-y-6">
+<div class="rounded-lg bg-[#1E293B] p-6 shadow-lg">
+<h3 class="text-lg font-semibold text-white">Total Spending</h3>
+<p class="text-4xl font-bold text-[#11d411] mt-2">₹23550</p>
+<div class="flex items-center mt-2">
+<span class="material-symbols-outlined text-green-400">arrow_upward</span>
+<p class="text-green-400 text-sm font-medium ml-1">+12.5% vs. last month</p>
+</div>
+</div>
+<div class="rounded-lg bg-[#1E293B] p-6 shadow-lg">
+<h3 class="text-lg font-semibold text-white">Category Breakdown</h3>
+<ul class="mt-4 space-y-3">
+<li class="flex justify-between items-center text-white/80">
+<span>Food &amp; Dining</span>
+<span class="font-medium text-white">₹6200</span>
+</li>
+<li class="flex justify-between items-center text-white/80">
+<span>Travel</span>
+<span class="font-medium text-white">₹3150</span>
+</li>
+<li class="flex justify-between items-center text-white/80">
+<span>Stationary</span>
+<span class="font-medium text-white">₹5200</span>
+</li>
+<li class="flex justify-between items-center text-white/80">
+<span>Entertainment</span>
+<span class="font-medium text-white">₹3200</span>
+</li>
+<li class="flex justify-between items-center text-white/80">
+<span>Useless Item</span>
+<span class="font-medium text-white">₹3850</span>
+</li>
+<li class="flex justify-between items-center text-white/80">
+<span>Health</span>
+<span class="font-medium text-white">₹1950</span>
+</li>
+</ul>
+</div>
+<div class="rounded-lg bg-[#1E293B] p-6 shadow-lg">
+<p class="text-white/80 text-sm">
+                    This radar chart provides a comprehensive overview of your expenditures. Each axis corresponds to a spending category, with the data points indicating the amount spent. A larger area signifies higher spending in those categories.
+                  </p>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+<script>
+      const ctx = document.getElementById('radarChart').getContext('2d');
+      new Chart(ctx, {
+        type: 'radar',
+        data: {
+          labels: ['Food', 'Travel', 'Entertainment', 'Stationary', 'Useless Item', 'Health'],
+          datasets: [{
+            label: 'Current Month Spending',
+            data: [450, 420, 400, 480, 350, 250],
+            fill: true,
+            backgroundColor: 'rgba(17, 212, 17, 0.2)',
+            borderColor: 'rgb(17, 212, 17)',
+            pointBackgroundColor: 'rgb(17, 212, 17)',
+            pointBorderColor: '#fff',
+            pointHoverBackgroundColor: '#fff',
+            pointHoverBorderColor: 'rgb(17, 212, 17)'
+          }, {
+            label: 'Last Month Spending',
+            data: [430, 400, 410, 450, 330, 280],
+            fill: true,
+            backgroundColor: 'rgba(255, 255, 255, 0.1)',
+            borderColor: 'rgb(200, 200, 200)',
+            pointBackgroundColor: 'rgb(200, 200, 200)',
+            pointBorderColor: '#fff',
+            pointHoverBackgroundColor: '#fff',
+            pointHoverBorderColor: 'rgb(200, 200, 200)'
+          }]
+        },
+        options: {
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    labels: {
+                        color: 'white'
+                    }
+                }
+            },
+            scales: {
+                r: {
+                    angleLines: {
+                        color: 'rgba(255, 255, 255, 0.2)'
+                    },
+                    grid: {
+                        color: 'rgba(255, 255, 255, 0.2)'
+                    },
+                    pointLabels: {
+                        color: 'white',
+                        font: {
+                            size: 14
+                        }
+                    },
+                    ticks: {
+                        color: 'white',
+                        backdropColor: 'rgba(0,0,0,0)'
+                    }
+                }
+            }
+        }
+      });
+    </script>
+</body></html>
